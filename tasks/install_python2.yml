@@ -1,0 +1,23 @@
+#
+# Installs Python2 packages
+#
+---
+- name: Install python2 packages
+  package:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  loop:
+    - "{{ python2_packages }}"
+
+
+- name: Install python pip packages
+  pip:
+    name: "{{ item }}"
+    state: present
+    executable: "{{ python_pip_executable }}"
+  loop:
+    - "{{ python_pip_packages }}"
+    - "{{ python_pip_packages_extra }}"
+  when: not python3_install
+

@@ -1,0 +1,9 @@
+#
+# Installs Python2, Python3, and related packages
+#
+---
+- import_tasks: install_python2.yml
+  when: python2_install
+
+- import_tasks: install_python3.yml
+  when: python3_install

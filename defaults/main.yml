@@ -1,0 +1,14 @@
+#
+# Defaults
+#
+# These variables are those that are suited to be overridden in
+# the playbooks. The initial values are considered strong defaults
+# for regular usage. Definitions that are expected to remain constant 
+# under most circumstances should instead be placed in the vars file.
+#
+---
+python2_install: True
+python3_install: True
+python3_version: 3
+python_pip_executable: pip3
+python_pip_packages_extra: []

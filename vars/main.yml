@@ -1,0 +1,26 @@
+#
+# Vars
+#
+# Definitions in this file are expected to remain constant and
+# aren't intended to be overidden in the playbook. If you find
+# yourself needing to override these definitions, consider if
+# the value needs to be changed or if the definitions is better
+# suited for placement in the defaults file. 
+#
+---
+python3_package: "python{{ python3_version }}"
+
+python2_packages:
+  - python
+  - python-dev
+  - python-pip
+
+python3_packages:
+ - "{{ python3_package }}"
+ - python3-dev
+ - python3-pip
+
+python_pip_packages:
+ - virtualenv
+ - setuptools
+ - pipenv
